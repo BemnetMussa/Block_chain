@@ -6,4 +6,9 @@ contract Sidekick {
         (bool success, ) = hero.call(data);
         require(success);
     }
+
+    function makeContact(address hero) external {
+        (bool success, ) = hero.call(hex"deadbeef");
+        require(success);
+    }
 }
