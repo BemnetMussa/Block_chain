@@ -1,12 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-error NotEnoughEther();
-
 contract Contract {
     constructor() payable {
-        if(msg.value == 0) {
-            revert NotEnoughEther();
-        }
+        require(msg.value >= 1 ether, "Must send at least 1 ether");
     }
 }

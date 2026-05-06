@@ -8,7 +8,7 @@ contract Sidekick {
     }
 
     function makeContact(address hero) external {
-        (bool success, ) = hero.call(hex"deadbeef");
+        (bool success, ) = hero.call(hex"1234");
         require(success);
     }
 }
